@@ -1,0 +1,12 @@
+# Wasmer Edge Deployment Configuration Map
+# Run "wasmer deploy" in this directory to publish to Wasmer Edge seamlessly!
+kind: wasmer.io/App.v0
+name: dccn-quiz-app
+package: $USER/dccn-quiz-app # The Wasmer CLI will prompt to substitute with your target namespace
+scaling:
+  mode: auto
+  min_instances: 1
+  max_instances: 10
+# Environment configuration can be declared here if needed
+# env:
+#   GEMINI_API_KEY: "<your-secret-key>"
